@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block main %}
+<div class="container">
+    <h1>Computer Parts List</h1>
+
+    {% for object in object_list %}
+    <div class="row">
+        <div class="column">
+            <a href="{% url 'detail_list' ComputerParts.pk %}">{{ComputerParts.name}}</a>
+        </div>
+    </div>
+    {% endfor %}
+</div>
+{% endblock main %}
